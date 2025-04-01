@@ -14,22 +14,26 @@
         
         <div class="content-wrapper">
             <section class="profile-section">
-                <div class="profile-images">
-                    <img src="Sohyunxxi_profile_Portugal.jpg" alt="포르투갈">
-                    <img src="Sohyunxxi_profile_Tyoko.jpg" alt="도쿄">
-                </div>
-                
-                <div class="profile-description">
-                    <p>여행하는 것을 좋아하는 개발자</p>
-                </div>
-                
-                <div class="profile-info">
-                    <p>이름 : 이소현</p>
-                    <p>생일 : 2002.05.08</p>
-                    <p>나이 : 24세</p>
-                    <p>성별 : 여성</p>
-                    <p>MBTI : INTJ ➡️ ENFP </p>
-                    <p>전공 : 컴퓨터공학과</p>
+                <div class="profile-top">
+                    <div class="profile-images">
+                        <img id="profile-image" src="Sohyunxxi_profile_Portugal.jpg" alt="포르투갈" onclick="changeImage()">
+                        <p>Click me!</p>
+                    </div>                    
+                    
+                    <div class="profile-intro">
+                        <div class="profile-description">
+                            <p>여행하는 것을 좋아하는 개발자</p>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <p>이름 : 이소현</p>
+                            <p>생일 : 2002.05.08</p>
+                            <p>나이 : 24세</p>
+                            <p>성별 : 여성</p>
+                            <p>MBTI : INTJ ➡️ ENFP </p>
+                            <p>전공 : 컴퓨터공학과</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="social-links">
@@ -144,5 +148,15 @@
             </div>
         </footer>
     </div>
+    <script>
+        function changeImage() {
+            var image = document.getElementById("profile-image");
+            if (image.src.includes("Sohyunxxi_profile_Portugal.jpg")) {
+                image.src = "Sohyunxxi_profile_Tyoko.jpg";  
+            } else {
+                image.src = "Sohyunxxi_profile_Portugal.jpg"; 
+            }
+        }
+    </script>
 </body>
 </html>
